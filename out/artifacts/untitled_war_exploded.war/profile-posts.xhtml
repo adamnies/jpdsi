@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+
+</h:head>
+<h:body>
+    <h:form>
+        <div class="row" style="margin: 20px;">
+            <div class="col-md-2">
+                <h:graphicImage url="#{profilePostsBB.newPostImage}"
+                                style="margin-top: 10px; width: 50px; height: 50px; border-radius: 50%; border: 3px solid rgba(160,195,202,0.53)">
+                </h:graphicImage>
+            </div>
+            <div class="col-md-10">
+                <h:inputTextarea value="#{profilePostsBB.newPostText}"
+                                 styleClass="form-control">
+                </h:inputTextarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-2">
+                <h:commandButton action="#{profilePostsBB.addPost()}"
+                                 styleClass="btn btn-default"
+                                 value="#{textProfile.ADD}">
+
+                </h:commandButton>
+            </div>
+            <div class="col-md-5">
+                <ui:repeat value="#{profilePostsBB.postsList}" var="post">
+                    <tr>
+                        <td>#{post}</td>
+                    </tr>
+                </ui:repeat>
+            </div>
+        </div>
+    </h:form>
+    <div class="row bordersuper2">
+
+
+    </div>
+</h:body>
+</html>
+
+

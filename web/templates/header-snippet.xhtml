@@ -1,0 +1,36 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+
+    <h:head>
+        <h:outputStylesheet name="/css/bootstrap.css"></h:outputStylesheet>
+    </h:head>
+
+    <h:body>
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-1 col-md-1 col-md-offset-1">
+                        <div class="navbar-header">
+                            <h:form style="font-size: 140%; font-family: Helvetica">
+                                <h:commandLink action="index?faces-redirect=true" styleClass="navbar-brand-custom">
+                                    <h:graphicImage style="width: 50px"
+                                                    url="#{resource['template:img/abc.png']}"/>#{textTemplates.PAGE}
+                                </h:commandLink>
+                            </h:form>
+                        </div>
+                    </div>
+                    <div class="col-sm-1 col-md-1 col-md-offset-8 col-sm-offset-0">
+                        <!--<h:selectOneMenu value="#{user.favCoffee1}" styleClass="select-style"-->
+                        <!--style="width: auto; margin: 15px;">-->
+                        <!--<f:selectItem itemValue="polish" itemLabel="PL" style="text-align: center"/>-->
+                        <!--<f:selectItem itemValue="english" itemLabel="EN"/>-->
+                        <!--</h:selectOneMenu>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</ui:composition>
